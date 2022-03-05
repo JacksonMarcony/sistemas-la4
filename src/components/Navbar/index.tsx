@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import logoImg from "../../assets/img/marca/logo.jpg";
+import logoImg from "../../assets/img/marca/logo.webp";
 import verifiedIcon from "../../assets/icons/verified.svg";
 
 import "./styles.scss";
@@ -17,7 +17,7 @@ export function Navbar() {
         </div>
       </div>
 
-      <div className="content-container">
+      {/* <div className="content-container">
         <ul>
           <Link to={"/"}>
             <li>Home</li>
@@ -40,11 +40,11 @@ export function Navbar() {
           </Link>
         </ul>
 
-      </div>
-        <a className="btn-cta" href="#3" target="_blank" rel="noopener noreferrer">
+      </div> */}
+        <Link to="/formulario-pdv" className="btn-cta">
           <img src={verifiedIcon} alt="Ícone verificado" />
-          Experimente Grátis
-        </a>
+          Demonstração gratuita
+        </Link>
     </header>
   );
 }

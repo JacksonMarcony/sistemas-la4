@@ -1,0 +1,92 @@
+.scomponent-pdv-container {
+  margin-top: 100px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 30px;
+
+  .img-container {
+    max-width: 650px;
+    min-width: 320px;
+    width: 50%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .content-container {
+    padding: 20px;
+    max-width: 515px;
+    min-width: 320px;
+    width: 50%;
+
+    p {
+      margin: 20px 0 30px;
+    }
+    .btn-demo {
+      max-width: 350px;
+      padding: 15px 30px;
+      background: var(--color-primary);
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+
+      img {
+        margin-right: 10px;
+        width: 35px;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      width: 100%;
+
+      p {
+        margin: 15px 0 20px;
+        font-size: 17px;
+      }
+      h2 {
+        font-size: 24px;
+      }
+      .btn-demo {
+        font-size: 17px;
+        padding: 10px 10px;
+
+        img {
+          width: 30px;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: 20px 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column !important;
+
+    .img-container {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 360px) {
+    padding: 0 10px;
+    .content-container {
+      min-width: 250px;
+    }
+
+    .img-container {
+      min-width: 250px;
+    }
+  }
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
