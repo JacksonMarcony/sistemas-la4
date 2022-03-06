@@ -1,17 +1,20 @@
 import React from "react";
 
 import { Routes, Route, HashRouter } from "react-router-dom";
+import { Loading } from "../components/Loading";
 
-const SistemaPDV =  React.lazy(() => import("../pages/SistemaPDVBeta"));
+const SistemaPDVBeta =  React.lazy(() => import("../pages/SistemaPDVBeta"));
+const SistemaPDV =  React.lazy(() => import("../pages/SistemaPDV"));
 const FormPDV =  React.lazy(() => import("../pages/FormPDV"));
 const Thank =  React.lazy(() => import("../pages/Thank"));
 
 export function Router() {
   return (
     <HashRouter>
-      <React.Suspense fallback={<h1>Loading...</h1>}>
+      <React.Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<SistemaPDV />} />
+          <Route path="/pdv" element={<SistemaPDVBeta />} />
           <Route path="/formulario-pdv" element={<FormPDV />} />
           <Route path="/entraremos-em-contato" element={<Thank />} />
           <Route
