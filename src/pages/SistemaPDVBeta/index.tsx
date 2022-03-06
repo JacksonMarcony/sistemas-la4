@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { Navbar } from "../../components/Navbar";
-import bannerSistemaPDV from "../../assets/img/banner-intro.png";
+import bannerSistemaPDV from "../../assets/img/banner-intro.webp";
 import logInIcon from "../../assets/icons/login.svg";
 import dotsElementImg from "../../assets/img/elements/dots.svg";
-import paymentMachineImg from "../../assets/img/payment-methods.png";
-import connectionImg from "../../assets/img/server.svg";
-import mobileControlImg from "../../assets/img/mobile-app.png";
+import paymentMachineImg from "../../assets/img/payment-methods.webp";
+import connectionImg from "../../assets/img/server.webp";
+import mobileControlImg from "../../assets/img/mobile-app.webp";
 import stockIcon from "../../assets/icons/stock.svg";
 import faqIcon from "../../assets/icons/icon-faq.png";
-import backupServerImg from "../../assets/img/backup-image.png";
+import backupServerImg from "../../assets/img/backup-image.webp";
 import xmlImg from "../../assets/img/xml.webp";
 import paymentModesImg from "../../assets/img/payment-modes-example.webp";
 import balanceImg from "../../assets/img/balance-example.webp";
@@ -76,6 +76,7 @@ export default function SistemaPDV() {
     <div id="sistema-pdv-page">
       <Navbar />
       <main className="main-pdv-content fw">
+        <div className="element-curve" />
         {/* <div className="background-overlay"></div> */}
         <div className="content-container">
           <h1>
@@ -83,13 +84,13 @@ export default function SistemaPDV() {
           </h1>
           <p>
             Nosso sistema PDV te ajuda na gestão completa do seu negócio com a
-            facilidade e praticidade que sua empresa precisa.
+            facilidade e praticidade que sua empresa merece.
           </p>
-          <p>* Sem taxa de adesão</p>
           <Link to="/formulario-pdv" className="btn-demo">
             <img src={logInIcon} alt="" />
-            Peça sua demonstração. É grátis!
+            Demonstração grátis!
           </Link>
+          <code>*Sem taxa de adesão e contratos.</code>
         </div>
         <div className="img-container">
           <img draggable="false" id="el-cc" src={creditCardEl} alt="" />
@@ -126,12 +127,15 @@ export default function SistemaPDV() {
 
       <SectionPDV
         title="Já deixou de vender por não receber pelo PIX?"
-        paragraph={`Variedade nos meios de pagamento é crucial! Leve uma melhor experiência ao seu cliente e não perca mais vendas. 
-        ${(
-          <br />
-        )} Confira, suportamos: dinheiro, PIX, principais maquininhas(TEF) de cartão de crédito/débito, boleto e a prazo.`}
         image={paymentMachineImg}
-      />
+        paragraph=""
+      >
+        Variedade nos meios de pagamento é crucial! Leve uma melhor experiência
+        ao seu cliente e não perca mais vendas.
+        <br />
+        Confira, suportamos: dinheiro, PIX, principais maquininhas(TEF) de
+        cartão de crédito/débito, boleto e a prazo.
+      </SectionPDV>
 
       {/* <SectionPDV
         title="Venda com ou sem internet"
@@ -140,14 +144,19 @@ export default function SistemaPDV() {
         isReverse={true}
       /> */}
 
-      <SectionPDV
-        title="Venda com ou sem internet"
-        paragraph="Não dependa de conexão com Internet ou do funcionamento
+      <section className="background-gray mt-100">
+        <SectionPDV
+          title="Venda com ou sem internet"
+          paragraph="Não dependa de conexão com Internet ou do funcionamento
         do roteador para realizar vendas em nosso PDV. 
         A sua loja nunca deve parar e seu estoque deve estar sempre em dia."
-        image={connectionImg}
-        isReverse={true}
-      />
+          image={connectionImg}
+          isReverse={true}
+          customSection={{
+            additionalClassName: "mt-0",
+          }}
+        />
+      </section>
 
       <section className="container text-center mt-100">
         <h2 className="title ph-20">Como iremos te ajudar</h2>
@@ -179,6 +188,9 @@ export default function SistemaPDV() {
         title="Tenha seus indicadores na palma da mão! Onde e quando quiser."
         paragraph="Não perca sua empresa de vista! Com nosso aplicativo você pode verificar como estão as vendas onde estiver, por meio do seu celular com nosso APP!"
         image={mobileControlImg}
+        customSection={{
+          widthImg: "width-img-mobile",
+        }}
       />
 
       <section className="experience-container">
@@ -244,6 +256,23 @@ export default function SistemaPDV() {
         isReverse={true}
       />
 
+      {/* <section className="background-gray mt-100">
+        <SectionPDV
+          title="“Guarda meu lugar na fila, filho.”"
+          image={paymentMachineImg}
+          cta="Confira e peça sua demonstração"
+          customSection={{
+            additionalClassName: "mt-0"
+          }}
+          paragraph=""
+        >
+          Esse é o som que uma mãe atarefada faz, quando percebe que a fila do supermercado está longa.
+          <br />
+          Nenhum consumidor gosta de esperar na fila, mas é muito mais fácil repudiar do que ajudar, no entanto, a Sistemas LA4 oferece gestão de vários terminais, interface intuitiva e variedade na forma de pagamento por um único motivo: ajudar o empreendedor. 
+
+        </SectionPDV>
+      </section> */}
+
       <section className="steps-container container text-center mt-150">
         <h2 className="title ph-20">Seu PDV pronto pra uso em 3 passos</h2>
         <div className="steps-articles fw">
@@ -264,7 +293,7 @@ export default function SistemaPDV() {
 
       {/* margin-bottom: 10px !important; */}
       <section className="container text-center mt-100">
-        <h2 className="title ph-20">Muito mais funcionalidade</h2>
+        <h2 className="title ph-20">Muito mais funcionalidades</h2>
         <Slider {...carouselSingleItemSettings} className="mt-40">
           <div className="feature-carousel-item">
             <img loading="lazy" src={paymentModesImg} alt="" />

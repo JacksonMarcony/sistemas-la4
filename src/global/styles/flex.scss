@@ -1,9 +1,19 @@
 .fw {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .container {
-    max-width: 1200px;
-    margin: auto;
+  max-width: 1200px;
+  margin: auto;
 }
+
+.background-gray {
+  background-color: #eff4f8;
+  padding: 30px 0;
+}
+
+.width-img-mobile {
+  width: 37% !important;
+}
+
