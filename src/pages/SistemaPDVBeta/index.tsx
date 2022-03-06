@@ -128,8 +128,8 @@ export default function SistemaPDV() {
         title="Já deixou de vender por não receber pelo PIX?"
         paragraph={`Variedade nos meios de pagamento é crucial! Leve uma melhor experiência ao seu cliente e não perca mais vendas. 
         ${(
-          <br />
-        )} Confira, suportamos: dinheiro, PIX, principais maquininhas(TEF) de cartão de crédito/débito, boleto e a prazo.`}
+            <br />
+          )} Confira, suportamos: dinheiro, PIX, principais maquininhas(TEF) de cartão de crédito/débito, boleto e a prazo.`}
         image={paymentMachineImg}
       />
 
@@ -205,6 +205,15 @@ export default function SistemaPDV() {
           </div>
         </div>
       </section>
+      <section className="experience-container">
+        <h2 className="ph-20" id="title-experience-container">
+          Comece uma nova etapa de evolução com apenas 3 passos
+        </h2>
+        <Link to="/formulario-pdv" className="btn-demo" id="btn-demo-experience">
+          Peça sua demonstração. É grátis!
+        </Link>
+      </section>
+      
 
       {/* <section className="main-features container fw">
         <div className="options-container">
