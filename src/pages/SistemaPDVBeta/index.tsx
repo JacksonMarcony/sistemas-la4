@@ -217,6 +217,15 @@ export default function SistemaPDV() {
           </div>
         </div>
       </section>
+      <section className="experience-container">
+        <h2 className="ph-20" id="title-experience-container">
+          Comece uma nova etapa de evolução com apenas 3 passos
+        </h2>
+        <Link to="/formulario-pdv" className="btn-demo" id="btn-demo-experience">
+          Peça sua demonstração. É grátis!
+        </Link>
+      </section>
+      
 
       {/* <section className="main-features container fw">
         <div className="options-container">

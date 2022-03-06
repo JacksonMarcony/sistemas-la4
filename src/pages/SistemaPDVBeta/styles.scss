@@ -25,10 +25,22 @@
   }
 }
 
+
 #sistema-pdv-page {
   // background: #F0F9FF;
   height: auto;
 
+  #title-experience-container{
+    font-size: 4rem;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 4rem;
+
+    @media (max-width: 550px) {
+        font-size: 2.5rem;
+        line-height: 3rem;
+      }
+  }
   .main-pdv-content {
     .element-curve {
       position: absolute;
@@ -209,6 +221,8 @@
       }
     }
 
+    
+    
     @media (max-width: 550px) {
       padding-bottom: 80px;
       padding-top: 0px;
@@ -335,6 +349,37 @@
       }
     }
   }
+  #section-experience-container{
+    font-size: 3rem;
+    width: 60%;
+    margin: 0 auto;
+    
+  }
+
+  #btn-demo-experience{
+    margin: auto;
+    max-width: 450px;
+    margin-top: 3rem;
+    padding: 15px 30px;
+    background: var(--color-secondary);
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    img {
+      margin-right: 10px;
+      width: 35px;
+    }
+  
+}
 
   .experience-container {
     background: var(--color-primary-gradient-90);
